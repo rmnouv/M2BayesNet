@@ -1,0 +1,24 @@
+{
+    "id": "C6510481",
+    "path": "H:/Algorithm/M2BayesNet/src/rcpp_hello.cpp",
+    "project_path": "src/rcpp_hello.cpp",
+    "type": "cpp",
+    "hash": "1168065414",
+    "contents": "",
+    "dirty": false,
+    "created": 1765019890950.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1765019888,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1765019888,
+    "read_only": false,
+    "read_only_alternatives": []
+}
