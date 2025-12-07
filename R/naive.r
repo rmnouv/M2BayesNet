@@ -1,3 +1,6 @@
+source('CommonFunction.R')
+source('utils.r')
+
 #naive structure learning
 naive_bn_structure_learning <- function(data, distribution = c("gaussian","multinomial")) {
   distribution <- match.arg(distribution)
