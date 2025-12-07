@@ -19,7 +19,7 @@ Create multinomial data
 ```{r}
 library(datasets)
 data("Titanic")
-Titanic_df <- as.data.frame(as.table(Titanic))
+Titanic_df <- as.data.frame(Titanic)
 Titanic_df <- Titanic_df[rep(seq_len(nrow(Titanic_df)), Titanic_df$Freq), 1:4]
 ```
 
@@ -27,18 +27,30 @@ Create gaussian data
 ```{r}
 data(iris)
 iris$Species <- as.numeric(iris$Species)
+iris_matrix <- as.matrix(iris)
 ```
 
 ```{r}
-# Precompute local scores (limit parent sets up to size 2)
-dataset <- Titanic_df
-distribution <- "multinomial"
-# distribution <- "gaussian"
+# for Gaussian dataset
+dataset <- iris_matrix
+distribution <- "gaussian"
 
 res <- branch_and_bound_bn_cpp(dataset, distribution = distribution)
 set_adj_names(res$best_adj, dataset)
 res$best_score
 ```
+
+```{r}
+# for Multinomial dataset
+dataset <- Titanic_df
+distribution <- "multinomial"
+
+res <- branch_and_bound_bn_cpp(dataset, distribution = distribution)
+set_adj_names(res$best_adj, dataset)
+res$best_score
+res
+```
+
 
 ```{r}
 library(ggplot2)
